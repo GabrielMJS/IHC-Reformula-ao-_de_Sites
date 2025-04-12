@@ -102,24 +102,76 @@ body {
 
 /* Rodapé */
 .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    font-family: Arial, sans-serif;
 }
 
-.footer p {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info,
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-info h3,
+.footer-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #007BFF;
     font-size: 0.9rem;
 }
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px; /* Aumenta a largura máxima do carrossel */
     margin: 0 auto;
     overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    border: 2px solid #ccc; /* Borda ao redor do carrossel */
+    border-radius: 10px; /* Adiciona bordas levemente arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
 }
 
 .carousel-track {
@@ -134,22 +186,28 @@ body {
 }
 
 .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 300px; /* Aumenta a largura fixa */
+    height: 300px; /* Aumenta a altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 0; /* Remove bordas arredondadas */
+    margin: 0 auto; /* Centraliza a imagem */
 }
 
 .carousel-item strong {
     display: block;
-    margin-top: 10px;
-    font-size: 1.2rem;
+    margin-top: 15px;
+    font-size: 1.5rem; /* Aumenta o tamanho do título */
     color: #333;
+    max-width: 600px; /* Limita a largura horizontal do texto */
+    margin: 0 auto; /* Centraliza o texto */
 }
 
 .carousel-item p {
-    margin-top: 5px;
-    font-size: 0.9rem;
+    margin-top: 10px;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
     color: #666;
+    max-width: 600px; /* Limita a largura horizontal do texto */
+    margin: 0 auto; /* Centraliza o texto */
 }
 
 .carousel-buttons {
@@ -159,6 +217,7 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    padding: 0 20px; /* Adiciona espaçamento interno para os botões */
 }
 
 .carousel-button {
